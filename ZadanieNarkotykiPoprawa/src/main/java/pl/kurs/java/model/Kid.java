@@ -10,11 +10,13 @@ public class Kid {
     private String surname;
     private int age;
     private List<Drug> ddrugs = new ArrayList<>();
+    private static List<Kid> kidList = new ArrayList<>();
 
     public Kid(String name, String surname, int age) {
         this.name = name;
         this.surname = surname;
         this.age = age;
+        kidList.add(this);
     }
 
     public void buyDrug(Drug drug){

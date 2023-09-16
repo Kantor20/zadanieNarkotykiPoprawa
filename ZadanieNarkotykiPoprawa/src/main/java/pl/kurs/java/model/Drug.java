@@ -9,6 +9,7 @@ public abstract class Drug {
     List<Ingredient> ingredients;
     boolean zlaJakosc;
     List<Kid> kids = new ArrayList<>();
+    private Kid kid;
 
     public Drug(String neme, List<Ingredient> ingredients) {
         this.name = neme;
@@ -16,9 +17,14 @@ public abstract class Drug {
         calculatePrice();
     }
 
+    public Kid getKid() {
+        return kid;
+    }
+
     public abstract void calculatePrice();
 
     public void addKid(Kid kid) {
+        this.kid = kid;
         kids.add(kid);
     }
 

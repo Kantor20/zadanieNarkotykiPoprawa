@@ -26,7 +26,11 @@ public class Main {
         Mdma mdma = new Mdma("mdma", ingredientsToMdma, 5);
 
         k1.buyDrug(lsd);
+        k3.buyDrug(lsd);
         k1.buyDrug(mdma);
+
+        lsd.addKid(k3);
+        lsd.calculatePrice();
 
         System.out.println(k1.getDdrugs());
         System.out.println(lsd.getKids());
